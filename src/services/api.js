@@ -47,7 +47,6 @@ const api = {
   logUser,
   newTransaction,
   getTransactions
-
 }
 
 export default api;
