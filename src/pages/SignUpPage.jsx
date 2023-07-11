@@ -62,7 +62,7 @@ export default function SignUpPage() {
           type="password"
           autocomplete="new-password"
           onChange={e => setConfirmPassword(e.target.value)}
-          value={confirmaPassword}
+          value={confirmPassword}
         />
 
         <button type="submit">Cadastrar</button>

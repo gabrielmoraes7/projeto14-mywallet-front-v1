@@ -3,13 +3,21 @@ import { BiExit } from "react-icons/bi"
 import { AiOutlineMinusCircle, AiOutlinePlusCircle } from "react-icons/ai"
 
 export default function HomePage() {
+  
+  const { auth, login } = useAuth();
+  const navigate = useNavigate();
+
+  function handleAdd(){
+    navigate("/nova-transacao/")
+  }
   return (
     <HomeContainer>
       <Header>
-        <h1>Olá, Fulano</h1>
+        <h1>Olá, {auth.name}</h1>
         <BiExit />
       </Header>
 
+    
       <TransactionsContainer>
         <ul>
           <ListItemContainer>
@@ -37,11 +45,11 @@ export default function HomePage() {
 
 
       <ButtonsContainer>
-        <button>
+        <button onClick={handleAdd}>
           <AiOutlinePlusCircle />
           <p>Nova <br /> entrada</p>
         </button>
-        <button>
+        <button onClick={handleSub}>
           <AiOutlineMinusCircle />
           <p>Nova <br />saída</p>
         </button>

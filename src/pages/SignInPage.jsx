@@ -18,7 +18,7 @@ export default function SignInPage() {
     const promise = api.login({ ...formData });
     promise.then((response) => {
       login(response.data);
-      navigate("/today");
+      navigate("/home");
     });
     promise.catch(() => {
       alert('Erro, tente novamente');
